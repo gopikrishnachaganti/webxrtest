@@ -215,16 +215,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             reticle.matrix = pose.transform.matrix;
           }
         }
-
-        let glBinding = new XRWebGLBinding(xrSession, gl);
-
-        let lightProbe = await xrSession.requestLightProbe();
-        let glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
-
-        lightProbe.addEventListener('reflectionchange', () => {
-          glCubeMap = glBinding.getReflectionCubeMap(lightProbe);
-        });
-
+        
         scene.startFrame();
 
         session.requestAnimationFrame(onXRFrame);
