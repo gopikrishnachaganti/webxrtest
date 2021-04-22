@@ -47,7 +47,7 @@
       arObject.visible = false;
       scene.addNode(arObject);
 
-      let flower = new Gltf2Node({url: 'media/gltf/shelf/Shelf.gltf'});
+      let flower = new Gltf2Node({url: 'media/gltf/shelf/BEP_01.gltf'});
       arObject.addNode(flower);
       flower.height = 7;
       flower.width = 10;
@@ -106,13 +106,6 @@
           });
           
           document.body.appendChild(gl.canvas);
-
-        function onResize() {
-          gl.canvas.width = gl.canvas.clientWidth * window.devicePixelRatio;
-          gl.canvas.height = gl.canvas.clientHeight * window.devicePixelRatio;
-        }
-        window.addEventListener('resize', onResize);
-        onResize();
 
           renderer = new Renderer(gl);
 
